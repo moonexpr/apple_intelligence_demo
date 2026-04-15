@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Claude artifacts & session instructions
+.claude/
+.mcp.json
+CLAUDE.md
+PROJECT.md
+build_plan.md
+
+# Xcode
+xcuserdata/
+*.xcuserstate
+DerivedData/
+.build/
