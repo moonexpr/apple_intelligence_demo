@@ -2,8 +2,11 @@ import Foundation
 import FoundationModels
 import ArgumentParser
 
-@main
-struct Siri: AsyncParsableCommand {
+struct Ask: AsyncParsableCommand {
+    static let configuration = CommandConfiguration(
+        abstract: "Send a prompt and get a plain text response (default)."
+    )
+
     @Argument(help: "The prompt to send to the model.")
     var prompt: String?
 
@@ -30,11 +33,8 @@ struct Siri: AsyncParsableCommand {
         }
 
         do {
-            let session = LanguageModelSession {
-                system
-            }
-            let response = try await session.respond(to: trimmed)
-            print(response.content)
+            let result = try await runIsolated(system: system, prompt: trimmed)
+            print(result)
         } catch {
             FileHandle.standardError.write(Data("Error: \(error.localizedDescription)\n".utf8))
             throw ExitCode.failure
