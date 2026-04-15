@@ -2,6 +2,8 @@
 
 A SwiftUI app demonstrating the `FoundationModels` framework (Apple's on-device LLM, iOS 26+). Built as a developer showcase and learning reference.
 
+![Structured Output tab](Screenshots/structured-output.png)
+
 ## Requirements
 
 - Xcode 26 beta
