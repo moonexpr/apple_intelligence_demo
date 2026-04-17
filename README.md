@@ -1,3 +1,5 @@
+> **This repository has been archived.** Development continues in [moonexpr/monogarden](https://github.com/moonexpr/monogarden) at `app/apple-intelligence-demo/`.
+
 # Apple Intelligence Demo
 
 A SwiftUI app demonstrating the `FoundationModels` framework (Apple's on-device LLM, iOS 26+). Built as a developer showcase and learning reference.
